@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <link rel="icon" type="image/x-icon" href="./react logo.png">
+</head>
+<body>
+    <div id="root"></div>
+    <div id="person"></div>
+    <div id="header"></div>
+    <div id="list"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+
+        // 1st problem
+
+        const Person = () => React.createElement('p', {id:'para'}, "Name: Jawed, " , " Age: 28");
+
+        const personContainer = document.getElementById("person");
+        const root1 = ReactDOM.createRoot(personContainer);
+
+        root1.render(Person());
+
+
+        // 2nd problem
+
+        const Btn = () => React.createElement('button', {id:'btn'}, React.createElement("span", {}, "Submit"));
+
+        const rootContainer = document.getElementById("root");
+        const root = ReactDOM.createRoot(rootContainer);
+
+        root.render(Btn());
+
+        // 3rd problem
+
+        const Header = () => React.createElement('h1', {id:'head'}, "title: Full stack web development" );
+
+        const headerContainer = document.getElementById("header");
+        const root2 = ReactDOM.createRoot(headerContainer);
+
+        root2.render(Header());
+
+        // 4th problem
+        
+        const List = () => React.createElement('ul', {id:'ul'}, React.createElement("li", {}, "items"));
+
+        const listContainer = document.getElementById("list");
+        const root3 = ReactDOM.createRoot(listContainer);
+
+        root3.render(List());
+    </script>
+</body>
+</html>
